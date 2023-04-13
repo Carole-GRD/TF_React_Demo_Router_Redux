@@ -1,0 +1,10 @@
+.footer {
+    width: 100%;
+    background-color: skyblue;
+    color: navy;
+    text-align: center;
+  }
+  .footer > p {
+    padding: 0.1rem;
+    margin: 0;
+  }
