@@ -19,7 +19,7 @@ const Header = () => (
         <nav>
             <ul className={style['nav-links']}>
                 <li>
-                <CustomNavLink to='/' text='Accueil' />
+                    <CustomNavLink to='/' text='Accueil' />
                 </li>
                 <li>
                     <CustomNavLink to='/product' text='Produit' />
