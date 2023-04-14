@@ -1,6 +1,6 @@
 import { createAction } from '@reduxjs/toolkit'
-
-
+import { nanoid } from 'nanoid'
+ 
 
 // création d'un produit
 export const productActionCreate = createAction('products/createProduct', (product) => {

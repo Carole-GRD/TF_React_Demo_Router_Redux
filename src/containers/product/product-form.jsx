@@ -2,17 +2,22 @@ import * as yup from 'yup'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { productActionCreate } from '../../store/actions/product.action'
 import { useId } from 'react'
 import style from './product.module.css'
+
+
 
 const productSchema = yup.object({
     name: yup.string().trim().required(),
     code: yup.string().matches(/^[a-z]{4}[0-9]{3}$/i).required(),
     description: yup.string(),
     price: yup.number().positive().required(),
-    discount: yup.number().positive(),
+    discount: yup.number().transform((value, original) => (original === "" ? null : value)).positive().nullable(),
     inStock: yup.boolean().required()
 })
+
 
 
 const ProductForm = () => {
@@ -22,14 +27,21 @@ const ProductForm = () => {
         defaultValues: {name: '', code: '', description: '', price: '', discount: '', inStock: true}
     })
 
+
     const navigate = useNavigate();
     const idForm = useId();
+    const dispatch = useDispatch()
+
 
     const handleProductSubmit = (product) => {
         // TODO : Use store to add product
+        console.log(product);
+
+        dispatch(productActionCreate(product));
 
         navigate('/product')
     }
+
 
     const handleProductReset = (e) => {
         e.preventDefault();
@@ -38,6 +50,7 @@ const ProductForm = () => {
 
     }
 
+    
     return (
         <form onSubmit={handleSubmit(handleProductSubmit)}
                 onReset={handleProductReset}

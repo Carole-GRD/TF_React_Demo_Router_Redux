@@ -7,7 +7,8 @@ const store = configureStore({
     // l'ensemble des reducers du store
     reducer: {
         // ajouter les reducers
-        productReducer
+        // alias (éventuellement nom du domaine): nom du reducer
+        prod: productReducer
 
     },
     // activation des outils de dev (actif uniquement en DEV)
