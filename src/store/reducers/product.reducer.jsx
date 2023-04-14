@@ -19,6 +19,10 @@ const initialState = {
 
 
 // Version AVEC Immer (moderne !)
+
+// -> PAS BESOIN DE L'INSTALLER DANS PACKAGE.JSON CAR IL EST PRÉSENT DANS Redux Toolkit
+
+// Redux Toolkit nous permet d'écrire une logique "mutante" dans les réducteurs. Il ne modifie pas réellement l'état car il utilise la bibliothèque Immer, qui détecte les changements apportés à un "état provisoire" et produit un nouvel état immuable basé sur ces changements.
 const productReducer = createReducer(initialState, (builder) => {
     builder
         .addCase(productActionCreate, (state, action) => {
