@@ -17,23 +17,25 @@ const initialState = {
     count: 1
 }
 
-
-// Version AVEC Immer (moderne !)
+// Version SANS Immer (à l'ancienne !)
 const productReducer = createReducer(initialState, (builder) => {
     builder
         .addCase(productActionCreate, (state, action) => {
-            // dans action.payload, il y a l'objet produit à créer
-            state.products.push(action.payload);
-            state.count++;
-
+            const product = action.payload;
+            return {
+                ...state,
+                count: state.count + 1,
+                products: [...state.products, product]
+            }
         })
         .addCase(productActionDelete, (state, action) => {
-
-            // dans action.payload, il y a l'id du produit à supprimer
             const targetId = action.payload;
-
-            state.products = state.products.filter(product => product.id !== targetId);
-            state.count = state.products.length;
+            const products = state.products.filter(product => product.id !== targetId)
+            return {
+                ...state,
+                count: products.length,
+                products 
+            }
         })
 })
 
