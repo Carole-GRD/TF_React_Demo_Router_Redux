@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom"
+import ProductTable from "../../../containers/product/product-table"
 
 const ProductListPage = () => {
 
     return (
         <>
-            <h1>Liste des produits</h1>
+            <h2>Liste des produits</h2>
+            <Link to='/product/create'><button>Ajouter un produit</button></Link>
+            <ProductTable />
 
             <div>
                 {/* chemin relatif */}

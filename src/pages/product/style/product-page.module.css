@@ -1,0 +1,11 @@
+.title-with-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100;
+    flex-wrap: wrap;
+}
+
+.title-with-link h2 {
+    flex-grow: 1;
+}

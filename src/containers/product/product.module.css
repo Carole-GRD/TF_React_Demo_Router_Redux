@@ -1,0 +1,23 @@
+.product-table  {
+    margin: 0 auto;
+    border: 1px solid navy;
+    border-collapse: collapse;
+}
+
+.product-table tr:nth-child(2n + 1) {
+    background-color: lightcyan;
+}
+
+.product-table tr:hover {
+    background-color: #c6c6c6;
+}
+
+.product-table th {
+    min-width: 5rem;
+    background-color: navy;
+    color: snow;
+}
+
+.product-table th, .product-table td {
+    padding: 0.5rem;
+}
