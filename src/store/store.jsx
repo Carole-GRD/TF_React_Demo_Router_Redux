@@ -1,7 +1,7 @@
 
 import { configureStore } from '@reduxjs/toolkit'
 import productReducer from './reducers/product.reducer'
-// import loggerMiddleware from 'redux-logger'
+import loggerMiddleware from 'redux-logger'
 
 
 // Customiser son middleware
