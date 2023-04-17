@@ -34,9 +34,9 @@ const ProductForm = () => {
 
 
     const handleProductSubmit = (product) => {
+        // console.log(product);
+        
         // TODO : Use store to add product
-        console.log(product);
-
         dispatch(productActionCreate(product));
 
         navigate('/product')
@@ -50,7 +50,7 @@ const ProductForm = () => {
 
     }
 
-    
+
     return (
         <form onSubmit={handleSubmit(handleProductSubmit)}
                 onReset={handleProductReset}

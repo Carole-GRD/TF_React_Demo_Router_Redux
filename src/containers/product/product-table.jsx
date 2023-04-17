@@ -40,7 +40,7 @@ const ProductTable= () => {
     const navigate = useNavigate();
 
 
-    // Récupération du dispatch, pour pouvoirenvoyer desactions vers le store
+    // Récupération du dispatch, pour pouvoir envoyer des actions vers le store
     const dispatch = useDispatch()
 
 
