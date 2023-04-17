@@ -25,6 +25,9 @@ const Header = () => (
                     <CustomNavLink to='/product' text='Produit' />
                 </li>
                 <li>
+                    <CustomNavLink to='/weather' text='Météo' />
+                </li>
+                <li>
                     <CustomNavLink to='/about' text='À propos' />
                 </li>
             </ul>

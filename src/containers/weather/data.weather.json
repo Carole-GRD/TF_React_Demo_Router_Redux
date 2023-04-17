@@ -1,0 +1,52 @@
+{
+    "city": "Liège",
+    "country": "BE",
+    "count": 5,
+    "data": [
+        {
+            "temp": 10.7,
+            "tempFeelsLike": 9.94,
+            "weatherDescription": "légère pluie",
+            "weatherUrlIcon": " https://openweathermap.org/img/wn/10d@2x.png",
+            "probaPrecipitation": 0.79,
+            "isDay": true,
+            "time": "2023-04-17 12:00:00"
+        },
+        {
+            "temp": 11.84,
+            "tempFeelsLike": 10.96,
+            "weatherDescription": "légère pluie",
+            "weatherUrlIcon": " https://openweathermap.org/img/wn/10d@2x.png",
+            "probaPrecipitation": 0.5,
+            "isDay": true,
+            "time": "2023-04-17 15:00:00"
+        },
+        {
+            "temp": 10.87,
+            "tempFeelsLike": 9.92,
+            "weatherDescription": "couvert",
+            "weatherUrlIcon": " https://openweathermap.org/img/wn/04d@2x.png",
+            "probaPrecipitation": 0.3,
+            "isDay": true,
+            "time": "2023-04-17 18:00:00"
+        },
+        {
+            "temp": 7.21,
+            "tempFeelsLike": 5.48,
+            "weatherDescription": "peu nuageux",
+            "weatherUrlIcon": " https://openweathermap.org/img/wn/02n@2x.png",
+            "probaPrecipitation": 0,
+            "isDay": false,
+            "time": "2023-04-17 21:00:00"
+        },
+        {
+            "temp": 5.81,
+            "tempFeelsLike": 4.32,
+            "weatherDescription": "peu nuageux",
+            "weatherUrlIcon": " https://openweathermap.org/img/wn/02n@2x.png",
+            "probaPrecipitation": 0,
+            "isDay": false,
+            "time": "2023-04-18 00:00:00"
+        }
+    ]
+}

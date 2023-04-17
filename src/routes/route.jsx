@@ -6,6 +6,7 @@ import ProductCreatePage from "../pages/product/pages/product-create.page";
 import ProductDetailPage from "../pages/product/pages/product-detail.page";
 import ProductListPage from "../pages/product/pages/product-list.page";
 import ProductPage from "../pages/product/product.page";
+import WeatherPage from "../pages/weather/weather.page";
 
 export const route = [
     {
@@ -41,6 +42,10 @@ export const route = [
                         element: <ProductCreatePage />
                     }
                 ]
+            },
+            {
+                path: 'weather',
+                element: <WeatherPage />
             }
             
         ]
