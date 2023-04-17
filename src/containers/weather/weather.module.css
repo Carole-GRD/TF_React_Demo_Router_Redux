@@ -1,8 +1,15 @@
+.weather-title {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
 .weather-results {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 0.5rem;
     list-style: none;
+    height: 18rem;
 }
 
 .weather-item {

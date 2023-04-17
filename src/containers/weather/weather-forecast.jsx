@@ -12,12 +12,12 @@ const WeatherForecastItem = ({temp, tempFeelsLike, weatherDescription, weatherUr
 
     return (
         <li className={styleItem}>
+            <p>{time}</p>
             <img src={weatherUrlIcon} alt={weatherDescription} title={weatherDescription} />
             <p>Temp : {temp} <br /> Ressenti : {tempFeelsLike}</p>
             {(probaPrecipitation > 0.5 && (
                 <p>Risque de pluie ! 🌧</p>
             ))}
-            <p>{time}</p>
         </li>
     )
 }
@@ -33,7 +33,9 @@ const WeatherForecast = () => {
 
     return (
         <div>
-            <p>Météo de "{result.city}" ({result.country})</p>
+            <p className={style['weather-title']}>
+                Météo de "{result.city}" ({result.country})
+            </p>
             <ul className={style['weather-results']}>
                 {result.data.map(weather => (
                     <WeatherForecastItem {...weather} key={weather.time} />
