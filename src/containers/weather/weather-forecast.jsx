@@ -1,6 +1,7 @@
 import data from './data.weather.json'
 import style from './weather.module.css'
 import clsx from 'clsx'
+import { useSelector } from 'react-redux'
 
 
 const WeatherForecastItem = ({temp, tempFeelsLike, weatherDescription, weatherUrlIcon, probaPrecipitation, isDay, time}) => {
@@ -27,7 +28,39 @@ const WeatherForecastItem = ({temp, tempFeelsLike, weatherDescription, weatherUr
 const WeatherForecast = () => {
 
     // TODO : Use data in store Redux. Remove Data !!!
-    const result = data
+    // const result = data
+
+    // Récupération des données du store
+    // const result = useSelector(state => state.weather.result)
+    // const loading = useSelector(state => state.weather.loading)
+    // const error = useSelector(state => state.weather.error)
+    // OU BIEN
+    const { loading, result, error} = useSelector(state => state.weather)
+
+    if (loading) {
+        return (
+            <div>
+                <p className={style['weather-title']}>Chargement...</p>
+            </div>
+        )
+    }
+
+    if (error) {
+        return (
+            <div>
+                 <p className={style['weather-title']}>Erreur !</p>
+            </div>
+        )
+    }
+
+    if (!result) {
+        return (
+            <div>
+                 <p className={style['weather-title']}>Pas de résultat</p>
+            </div>
+        )
+    }
+
 
     // TODO : Gestion du loading !
 

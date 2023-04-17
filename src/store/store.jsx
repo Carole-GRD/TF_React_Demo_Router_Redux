@@ -1,7 +1,9 @@
 
 import { configureStore } from '@reduxjs/toolkit'
-import productReducer from './reducers/product.reducer'
 import loggerMiddleware from 'redux-logger'
+
+import productReducer from './reducers/product.reducer'
+import weatherReducer from './reducers/weather.reducer'
 
 
 // Customiser son middleware
@@ -18,7 +20,8 @@ const store = configureStore({
     reducer: {
         // ajouter les reducers
         // alias (éventuellement nom du domaine): nom du reducer
-        prod: productReducer
+        prod: productReducer,
+        weather: weatherReducer
 
     },
     // activation des outils de dev (actif uniquement en DEV)
