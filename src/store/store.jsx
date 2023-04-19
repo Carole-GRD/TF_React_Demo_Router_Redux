@@ -3,6 +3,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import loggerMiddleware from 'redux-logger'
 
 import productReducer from './reducers/product.reducer'
+import progressReducer from './reducers/progress.reducer'
 import weatherReducer from './reducers/weather.reducer'
 
 
@@ -21,7 +22,8 @@ const store = configureStore({
         // ajouter les reducers
         // alias (éventuellement nom du domaine): nom du reducer
         prod: productReducer,
-        weather: weatherReducer
+        weather: weatherReducer,
+        progress: progressReducer
 
     },
     // activation des outils de dev (actif uniquement en DEV)
